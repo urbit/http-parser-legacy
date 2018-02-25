@@ -4,7 +4,7 @@ version = meson.project_version()
 
 inc = include_directories('./')
 install_headers('http_parser.h')
-lib = library('http_parser', sources: ['http_parser.c'], version: version,
+lib = static_library('http_parser', sources: ['http_parser.c'], version: version,
 include_directories: inc,
 c_args: [
 '-Wall',
